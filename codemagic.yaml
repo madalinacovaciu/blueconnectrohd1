@@ -8,9 +8,9 @@ workflows:
       - name: Grant execute permission
         script: chmod +x gradlew
       - name: Assemble Debug APK
-        script: ./gradlew assembleDebug
+        script: ./gradlew app:assembleDebug
     artifacts:
-      - app/build/outputs/apk/debug/app-debug.apk
+      - build/app/outputs/apk/debug/app-debug.apk
     publishing:
       email:
         recipients:
