@@ -10,8 +10,4 @@ workflows:
       - name: Assemble Debug APK
         script: ./gradlew app:assembleDebug
     artifacts:
-      - build/app/outputs/apk/debug/app-debug.apk
-    publishing:
-      email:
-        recipients:
-          - ROHD@blueconnect.ro
+      - app/build/outputs/apk/debug/app-debug.apk
