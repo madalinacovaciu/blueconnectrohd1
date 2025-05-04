@@ -1,0 +1,15 @@
+workflows:
+  android-build:
+    name: BlueConnect ROHD Codemagic Build
+    max_build_duration: 20
+    environment:
+      java: 17
+    scripts:
+      - name: Assemble Debug APK
+        script: ./gradlew assembleDebug
+    artifacts:
+      - app/build/outputs/**/*.apk
+    publishing:
+      email:
+        recipients:
+          - ROHD@blueconnect.ro
